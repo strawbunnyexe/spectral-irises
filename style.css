@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #4c4743;
+    color: #000000;
+    font-family:'Gill Sans', sans-serif;
+}
+/* Wrapper */
+.wrapper{
+    border: 2px solid #1c1c1b;
+    background-color: #353230;
+    padding: 18px;
+    margin: 1em;
+}
+
+/* Header section*/
+header{
+    height: 400px;
+    background-color: #843336;
+}
+
+/* Intro section*/
+#intro{
+    text-align: center;
+    background-color: #94484a;
+    margin: 2rem 0;
+    padding: 28px;
+}
+#intro h1{
+    border-top: 2px solid #c79443;
+    border-bottom: 2px solid #c79443;
+    color: #c79443;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+#intro p{
+    margin: 1em;
+}
+
+/* Explore more section for navigation*/
+#explore{
+    background-color: #c79443;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 2rem 0;
+    padding: 28px;
+}
+#explore div{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 1em;
+}
+#explore div img{
+    width: 100%;
+    height: auto;
+    border: 2px solid #1c1c1b;
+}
+
+/* Dev/project info section*/
+#devInfo{
+    background-color: #4c6584;
+    padding: 24px;
+
+}
+#devInfo h2{
+    grid-area: heading;
+    color: #c79443;
+    border-top: 2px solid #c79443;
+    border-bottom: 2px solid #c79443;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+#devInfo div{
+    margin: 1em 0;
+    grid-area: text;
+}
+#devInfo img{
+    grid-area: picture;
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+#allCharas{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.character{
+    text-align: center;
+    max-width: 400px;
+}
+.character img{
+    width: 100%;
+    height: auto;
+    border: 2px solid #1c1c1b;
+}
+
+@media only screen and (min-width: 768px){
+    #devInfo{
+        padding: 24px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2,auto);
+        grid-template-areas: "heading       ."
+                             "text   picture";
+        gap: 10px 40px;
+    }
+    #explore{
+        margin: 2rem 0;
+        padding: 12px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+}
+@media only screen and (min-width: 1024px){
+/* Wrapper */
+.wrapper{
+    padding: 18px;
+    margin: 2rem 10%;
+}
+/* Dev/project info section*/
+#devInfo{
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas: "heading       ."
+                         "text   picture";
+    gap: 10px 40px;
+}
+/* Explore more section for navigation*/
+#explore{
+    margin: 2rem 0;
+    padding: 12px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+}
+@media only screen and (min-width: 1408px){
+
+}
+
+/* Buttons style rules */
+.explore-btn{
+    background-color: #364a62;
+    display: inline-block;
+    width: 100%;
+    padding: 2em 0;
+    border: 2px solid black;
+    text-align: center;
+}
+.link-btn{
+    background-color: #9c2d30;
+    display: inline-block;
+    margin: 2em 0;
+    padding: 2em 4em;
+    border: 2px solid black;
+    text-align: center;
+}
+.nav-btn{
+    background-color: #c79443;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 1em;
+    border: 2px solid black;
+    text-align: center;
+}
+a { text-decoration: none; }
+a:link { color: #e4d9d9; }
+a:visited { color: #e4d9d9; }
+a:focus { color: #000000;}
+a:hover { color: #000000;}
+a:active { color: #000000; }
