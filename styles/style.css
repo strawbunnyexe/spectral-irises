@@ -1,7 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+
 body{
     background-color: #4c4743;
     color: #000000;
@@ -19,13 +16,14 @@ body{
 header{
     height: 400px;
     background-color: #843336;
+    margin-bottom: 20px;
 }
 
 /* Intro section*/
 #intro{
     text-align: center;
     background-color: #94484a;
-    margin: 2rem 0;
+    margin: 1em 0 2rem;
     padding: 28px;
 }
 #intro h1{
@@ -60,7 +58,7 @@ header{
 }
 
 /* Dev/project info section*/
-#devInfo{
+#devInfo, #locations{
     background-color: #4c6584;
     padding: 24px;
 
@@ -98,6 +96,46 @@ header{
     height: auto;
     border: 2px solid #1c1c1b;
 }
+.chara{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.tag{
+    background-color: #364a62;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 1em;
+}
+.tag img{
+    max-width: 100%;
+    height: auto;
+}
+.info{
+    background-color: #843336;
+    padding: 2em;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th{
+    background-color: #4c4743;
+  }
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+  }
+  tr:nth-child(even) {
+    background-color: #9a6c6c;
+  }
+  tr:nth-child(odd) {
+    background-color: #6e3a3a;
+  }
 
 @media only screen and (min-width: 768px){
     #devInfo{
@@ -141,9 +179,14 @@ header{
     flex-flow: row nowrap;
     justify-content: center;
 }
+.chara{
+    display: flex;
+    flex-flow: row nowrap;
 }
-@media only screen and (min-width: 1408px){
-
+.tag img{
+    max-width: 600px;
+    height: auto;
+}
 }
 
 /* Buttons style rules */
@@ -158,15 +201,19 @@ header{
 .link-btn{
     background-color: #9c2d30;
     display: inline-block;
-    margin: 2em 0;
-    padding: 2em 4em;
+    width: 100px;
+    margin: 1em 0;
+    padding: 1.5em 2em;
     border: 2px solid black;
     text-align: center;
 }
+.nav{
+    display: flex;
+}
 .nav-btn{
     background-color: #c79443;
-    display: inline-block;
-    margin: 10px 0;
+    margin: 10px auto;
+    width: 200px;
     padding: 1em;
     border: 2px solid black;
     text-align: center;
