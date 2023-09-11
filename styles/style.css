@@ -43,7 +43,7 @@ header{
     display: flex;
     flex-flow: row wrap;
     margin: 2rem 0;
-    padding: 28px;
+    padding: 14px;
 }
 #explore div{
     width: 100%;
@@ -81,25 +81,28 @@ header{
     height: auto;
     align-self: center;
 }
-
-#allCharas{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
 .character{
-    text-align: center;
-    max-width: 400px;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+#allCharas{
+    background-color: #c79443;
+    padding: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 14px;
 }
 .character img{
     width: 100%;
     height: auto;
     border: 2px solid #1c1c1b;
 }
+
 .chara{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 .tag{
     background-color: #364a62;
@@ -111,12 +114,12 @@ header{
     padding: 1em;
 }
 .tag img{
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 .info{
     background-color: #843336;
-    padding: 2em;
+    padding: 1em;
 }
 table {
     border-collapse: collapse;
@@ -128,7 +131,7 @@ table {
   td, th {
     border: 1px solid #dddddd;
     text-align: left;
-    padding: 12px;
+    padding: 10px;
   }
   tr:nth-child(even) {
     background-color: #9a6c6c;
@@ -154,6 +157,7 @@ table {
         flex-flow: row nowrap;
         justify-content: center;
     }
+
 }
 @media only screen and (min-width: 1024px){
 /* Wrapper */
@@ -179,10 +183,7 @@ table {
     flex-flow: row nowrap;
     justify-content: center;
 }
-.chara{
-    display: flex;
-    flex-flow: row nowrap;
-}
+
 .tag img{
     max-width: 600px;
     height: auto;
