@@ -2,7 +2,11 @@
 body{
     background-color: #4c4743;
     color: #000000;
-    font-family:'Gill Sans', sans-serif;
+    font-family: 'IM Fell English', serif;
+    font-size: 18px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'IM Fell English SC', serif;
 }
 /* Wrapper */
 .wrapper{
