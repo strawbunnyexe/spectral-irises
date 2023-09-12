@@ -3,17 +3,17 @@ body{
     background-color: #4c4743;
     color: #000000;
     font-family: 'IM Fell English', serif;
-    font-size: 18px;
 }
 h1,h2,h3,h4,h5,h6{
     font-family: 'IM Fell English SC', serif;
+    text-align: center;
 }
 /* Wrapper */
 .wrapper{
-    border: 2px solid #1c1c1b;
+    border: 1px solid #c79443;
     background-color: #353230;
-    padding: 18px;
-    margin: 1em;
+    padding: 14px;
+    margin: 8px;
 }
 
 /* Header section*/
@@ -25,20 +25,15 @@ header{
 
 /* Intro section*/
 #intro{
-    text-align: center;
     background-color: #94484a;
     margin: 1em 0 2rem;
-    padding: 28px;
+    padding: 16px;
 }
 #intro h1{
-    border-top: 2px solid #c79443;
-    border-bottom: 2px solid #c79443;
-    color: #c79443;
+    border-top: 2px solid #191918;
+    border-bottom: 2px solid #191918;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-}
-#intro p{
-    margin: 1em;
 }
 
 /* Explore more section for navigation*/
@@ -60,30 +55,42 @@ header{
     height: auto;
     border: 2px solid #1c1c1b;
 }
-
+.content{
+    background-color: #e0c9a6;
+    background-color: #e2ceb1;
+    padding: 1em;
+}
 /* Dev/project info section*/
 #devInfo, #locations{
     background-color: #4c6584;
     padding: 24px;
 
 }
+#devInfo{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 18px;
+}
 #devInfo h2{
-    grid-area: heading;
-    color: #c79443;
-    border-top: 2px solid #c79443;
-    border-bottom: 2px solid #c79443;
+    border-top: 2px solid #191918;
+    border-bottom: 2px solid #191918;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
-#devInfo div{
-    margin: 1em 0;
+#devInfo .content{
     grid-area: text;
 }
+#devInfo #profile{
+    grid-area: profile;
+    align-self: center;
+}
+#devInfo iframe{
+    grid-area: playlist;
+    align-self: center;
+}
 #devInfo img{
-    grid-area: picture;
     width: 100%;
     height: auto;
-    align-self: center;
 }
 .character{
     max-width: 300px;
@@ -130,28 +137,38 @@ table {
     width: 100%;
   }
   th{
-    background-color: #4c4743;
+    background-color: #c9b6a7;
   }
   td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid #000000;
     text-align: left;
     padding: 10px;
   }
-  tr:nth-child(even) {
-    background-color: #9a6c6c;
-  }
   tr:nth-child(odd) {
-    background-color: #6e3a3a;
+    background-color: #c9b6a7;
   }
 
 @media only screen and (min-width: 768px){
+    .wrapper{
+        border: 1px solid #c79443;
+        background-color: #353230;
+        padding: 18px;
+        margin: 1em;
+    }
+    /* Intro section*/
+    #intro{
+        text-align: center;
+        background-color: #94484a;
+        margin: 1em 0 2rem;
+        padding: 28px;
+    }
     #devInfo{
         padding: 24px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2,auto);
-        grid-template-areas: "heading       ."
-                             "text   picture";
+        grid-template-areas: "text       profile"
+                             "playlist   profile";
         gap: 10px 40px;
     }
     #explore{
@@ -173,11 +190,12 @@ table {
 #devInfo{
     padding: 24px;
     display: grid;
+
     grid-template-columns: repeat(2,auto);
     grid-template-rows: repeat(2,auto);
-    grid-template-areas: "heading       ."
-                         "text   picture";
-    gap: 10px 40px;
+    grid-template-areas: "text       profile"
+                         "playlist   profile";
+    gap: 40px 20px;
 }
 /* Explore more section for navigation*/
 #explore{
@@ -206,9 +224,9 @@ table {
 .link-btn{
     background-color: #9c2d30;
     display: inline-block;
-    width: 100px;
-    margin: 1em 0;
-    padding: 1.5em 2em;
+    width: 100%;
+    margin: 1em auto;
+    padding: 1.5em 0;
     border: 2px solid black;
     text-align: center;
 }
@@ -223,7 +241,9 @@ table {
     border: 2px solid black;
     text-align: center;
 }
-a { text-decoration: none; }
+a { text-decoration: none;
+    font-size: 20px;
+    font-family: 'IM Fell English SC', serif;;}
 a:link { color: #e4d9d9; }
 a:visited { color: #e4d9d9; }
 a:focus { color: #000000;}
